@@ -1,25 +1,27 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import Tab from '@material/react-tab';
+import TabBar from '@material/react-tab-bar';
+import '@material/react-tab-bar/dist/tab-bar.css';
+import '@material/react-tab/dist/tab.css';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+	<div>
+        <TabBar 
+          activeIndex={0}
+        >
+          <Tab>
+            <span className='mdc-tab__text-label'>One</span>
+          </Tab>
+
+           <Tab>
+            <span className='mdc-tab__text-label'>Tone</span>
+          </Tab>  
+
+        </TabBar>
       </div>
     );
   }
